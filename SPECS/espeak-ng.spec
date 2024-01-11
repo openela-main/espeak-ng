@@ -1,6 +1,6 @@
 Name:           espeak-ng
 Version:        1.50
-Release:        7%{?dist}
+Release:        9%{?dist}
 Summary:        eSpeak NG Text-to-Speech
 
 License:        GPLv3+
@@ -99,6 +99,14 @@ ESPEAK_DATA_PATH=`pwd` LD_LIBRARY_PATH=src:${LD_LIBRARY_PATH} src/espeak-ng ...
 %doc docs/*.html
 
 %changelog
+* Tue Jun 20 2023 Tomas Korbar <tkorbar@redhat.com> - 1.50-9
+- Fix gating.yaml
+- Related: rhbz#2190221
+
+* Tue Jun 20 2023 Tomas Korbar <tkorbar@redhat.com> - 1.50-8
+- Rebuild for rhbz#2190221
+- Resolves: rhbz#2190221
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 1.50-7
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
